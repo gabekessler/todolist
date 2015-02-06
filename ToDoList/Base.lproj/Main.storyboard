@@ -59,9 +59,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Todo Item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELC-AU-05W">
-                                <rect key="frame" x="16" y="285" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Todo Item" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ELC-AU-05W">
+                                <rect key="frame" x="16" y="91" width="568" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -70,7 +71,7 @@
                             <constraint firstAttribute="centerX" secondItem="ELC-AU-05W" secondAttribute="centerX" id="HUG-4r-vbR"/>
                             <constraint firstItem="ELC-AU-05W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tug-zd-zCn"/>
                             <constraint firstItem="ELC-AU-05W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mJc-66-isX"/>
-                            <constraint firstAttribute="centerY" secondItem="ELC-AU-05W" secondAttribute="centerY" id="vto-LI-6wu"/>
+                            <constraint firstItem="ELC-AU-05W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="yDA-4E-upH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add To Do Item" id="Yeq-Y5-esM">
@@ -85,6 +86,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="8ic-hU-quF" id="XFo-5U-U8Y"/>
+                        <outlet property="textField" destination="ELC-AU-05W" id="4Qs-tp-PrR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="lvA-UD-2sq" userLabel="Exit" sceneMemberID="exit"/>
